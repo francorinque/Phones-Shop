@@ -1,5 +1,85 @@
+/* TODO: agregar fuente */
+
 *,::before,::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --clr-primario: #f4f4f4;
+    --clr-secundario: #2A292D;
+    --clr-terciario: #D4D4D4;
+}
+
+body{
+    background-color: var(--clr-primario);
+    font-size: 14px;
+}
+
+/* navbar */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav__icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav__icons > i{
+    color: var(--clr-secundario);
+    font-size: 18px;
+}
+
+.nav__logo{
+    min-width: 100px;
+    font-size: clamp(20px,4vw,1.5rem); 
+}
+
+.nav__menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    top: 58px;
+    left: -100%;
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    background-color: var(--clr-secundario);
+    list-style: none;
+    transition: ease .4s;
+}
+
+/* clase al clickear el toggle se agrega desde js */
+.nav__menu.showme{
+    left:0;
+    transition: ease .4s;
+}
+
+.nav__menu > li{
+    width: 100%;
+    padding:  10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.nav__menu > li > a{
+    color: var(--clr-terciario);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+
