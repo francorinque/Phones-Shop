@@ -1,6 +1,9 @@
 
 
 const init = ()=> {
-    d.addEventListener("click",abrirMenu)
+    d.addEventListener("click",(e)=>{
+        abrirMenu(e)
+        abrirSearch(e)
+    })
 }
 init()

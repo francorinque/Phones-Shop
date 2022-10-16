@@ -26,11 +26,22 @@
     </ul>
     <!-- icons -->
     <div class="nav__icons">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="info-carrito">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="info-carrito__count">0</div>
+        </div>
+        <i class="fa-solid fa-magnifying-glass" id="iconSearch"></i>
         <i class="fa-solid fa-bars toggle" id="toggle"></i>
     </div>
 </nav>
+
+ <!-- contenedor input search -->
+ <form  class="search__form">
+     <div class="search__field">
+        <input type="text" class="search__input" placeholder="ej: iphone 14...">
+        <button class="search__btn">Ir</button>
+     </div>
+ </form>
 
 
 
