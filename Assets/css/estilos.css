@@ -10,9 +10,11 @@
     --clr-primario: #f4f4f4;
     --clr-secundario: #2A292D;
     --clr-terciario: #D4D4D4;
+    --clr-important: rgb(255, 183, 49);
     --regular: 300;
     --semibold: 500;
     --bold: 700;
+    --radius: 5px;
 }
 
 body{
@@ -20,6 +22,29 @@ body{
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
 }
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 20px;
+}
+
+.important-text{
+    color: var(--clr-important);
+}
+
+.btn{
+    background-color: var(--clr-terciario);
+    color: var(--clr-secundario);
+    font-weight: var(--semibold);
+    border: none;
+    border-radius: var(--radius);
+    min-width: 150px;
+    padding: 10px;
+}
+
+/**** terminan estilos generales ****/
 
 /* navbar */
 .nav{
@@ -128,6 +153,7 @@ body{
     top: 58px;
     left: -100%;
     width: 100%;
+    height: 100vh;
     padding: 20px 0;
     overflow: hidden;
     background-color: var(--clr-secundario);
@@ -198,6 +224,7 @@ body{
         gap: 20px;
         background-color: transparent;
         transition: none;
+        height: unset;
     }
 
 
@@ -242,4 +269,82 @@ body{
     .nav__menu{
         gap: 30px;  
     }
+}
+
+/*?hero  */
+.hero{
+    background-color: var(--clr-secundario);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero__title{
+    font-size: clamp(1.5rem,4vw,2rem);
+}
+
+.hero__content{
+    color: var(--clr-terciario);
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+
+.hero__picture{
+    height: 300px;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    background: url('../Imagenes/iphone14-black.png') no-repeat center/contain;
+}
+
+.hero__details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero__details-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero__circle{
+    --size: 30px;
+    width: var(--size);
+    height: var(--size);
+    background-color: #222;
+    border-radius: 50%;
+    display: block;
+    outline: 1px solid var(--clr-primario);
+    outline-offset: 2px;
+}
+
+.hero__details-container .hero__circle:nth-child(2){
+    background-color: cyan;
+}
+
+
+.hero__color{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.hero__details__title{
+    font-weight: var(--bold);
+    font-size: 16px;
+}
+
+.hero__num{
+    color: var(--clr-important);
 }
