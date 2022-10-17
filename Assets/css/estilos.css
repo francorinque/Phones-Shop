@@ -370,6 +370,7 @@ body{
 
 .hero__num{
     color: var(--clr-important);
+    font-size: 16px;
 }
 
 
@@ -390,34 +391,8 @@ body{
         gap: 50px;
     }
 
-   
-
-    .hero__color{
-        align-items: center;
-        height: 100%;
-        margin-bottom: 0;
-    }
-
-    .hero__circle{
-        --size: 20px;
-        width: var(--size);
-        height: var(--size);
-        background-color: #222;
-        border-radius: 50%;
-        display: block;
-        outline: 1px solid var(--clr-primario);
-        outline-offset: 2px;
-    }
-
-    .hero__details-container .hero__circle:nth-child(2){
-        background-color: cyan;
-    }
-
-
-
     .hero__details__title{
-        font-weight: var(--bold);
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .hero__num{
