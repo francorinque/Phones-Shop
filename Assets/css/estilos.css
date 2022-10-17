@@ -51,11 +51,11 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 0 20px;
     width: 100%;
+    height: 70px;
     max-width: 1200px;
     margin: 0 auto;
-    position: relative;
 }
 
 .nav__icons{
@@ -150,10 +150,10 @@ body{
     gap: 20px;
     position: fixed;
     z-index: 99;
-    top: 58px;
+    top: 70px;
     left: -100%;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 70px);
     padding: 20px 0;
     overflow: hidden;
     background-color: var(--clr-secundario);
@@ -184,6 +184,12 @@ body{
     position: relative;
 }
 
+.info-carrito:hover .fa-cart-shopping,
+#iconSearch:hover{
+    color: var(--clr-important);
+    cursor: pointer;
+}
+
 .info-carrito__count{
     --size: 20px;
     position: absolute;
@@ -209,11 +215,6 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        position: relative;
     }
  
 
@@ -238,7 +239,7 @@ body{
 
     .nav__menu > li > a{
         color: var(--clr-secundario);
-        font-size: 18px;
+        font-size: 16px;
     }
 
     #toggle{
@@ -260,8 +261,13 @@ body{
     .nav__menu li a:hover::after {
         transform: scaleX(1);
         transition: ease .15s;
-      }
+        background-color: var(--clr-important);
+    }
 
+    .nav__menu li a:hover{
+        color: var(--clr-important);
+        transition: ease .15s;
+    }
    
 }
 
@@ -347,4 +353,73 @@ body{
 
 .hero__num{
     color: var(--clr-important);
+}
+
+
+/* medias query hero */
+@media (min-width: 800px){
+    .hero{
+        flex-direction: row;
+    }
+
+    .hero__content{
+        justify-content: center;
+    }
+
+
+
+    /* .hero__picture{
+        height: 300px;
+        width: 100%;
+        display: grid;
+        place-content: center;
+        background: url('../Imagenes/iphone14-black.png') no-repeat center/contain;
+    } */
+
+    .hero__details{
+        flex-direction: row;
+        justify-content:  center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .hero__details-container{
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        height: 100%;
+    }
+
+    .hero__color{
+        align-items: center;
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    .hero__circle{
+        --size: 20px;
+        width: var(--size);
+        height: var(--size);
+        background-color: #222;
+        border-radius: 50%;
+        display: block;
+        outline: 1px solid var(--clr-primario);
+        outline-offset: 2px;
+    }
+
+    .hero__details-container .hero__circle:nth-child(2){
+        background-color: cyan;
+    }
+
+
+
+    .hero__details__title{
+        font-weight: var(--bold);
+        font-size: 16px;
+    }
+
+    .hero__num{
+        color: var(--clr-important);
+    }
+
 }
