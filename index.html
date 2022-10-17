@@ -10,9 +10,8 @@
     <title>Phones Shop</title>
 </head>
 <body>
-    <!-- TODO: agregar scroll y fixed al nav -->
 
-
+<!--  TODO: aplicar js para cambiar imagen en el hero -->
 
 
 
@@ -51,9 +50,8 @@
     </form>
 </header>
 
-
-
- <main>
+<!-- main  -->
+<main>
     <section class="container hero">
         <!-- text -->
         <div class="hero__content">
@@ -80,7 +78,30 @@
         <!-- foto -->
         <div class="hero__picture"></div>
     </section>
- </main>
+    <section class="container products">
+        <div class="products__title">Our Products</div>
+        <!-- btns -->
+        <div class="products__btns">
+            <button class="btn category-btn active">Todos</button>
+            <button class="btn category-btn" data-category="samsung">Samsung</button>
+            <button class="btn category-btn" data-category="iphone">Iphone</button>
+            <button class="btn category-btn" data-category="motorola">Motorola</button>
+        </div>
+        <!-- ?contenedor cards -->
+        <div class="products-container">
+            <article class="product">
+                <!-- foto -->
+                <div class="product__picture"></div>
+                <!-- info -->
+                <div class="product__info">
+                    <h2 class="product__title">NAME</h2>
+                    <span class="product__price">$55,4</span>
+                    <button class="btn add-to-cart">Add to cart</button>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
 
 
 
